@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-canvas: #f8fafb;
+  --color-ink: #1a2332;
+  --color-muted: #71717a;
+  --color-subtle: #a1a1aa;
+  --color-line: #e4e4e7;
+  --color-line-soft: #f0f2f5;
+  --color-line-step: #e2edf0;
+  --color-line-banner: #c7e3ea;
+  --color-track: #d4d4d8;
+  --color-pending: #f4f4f5;
+  --color-pending-bar: #e4e4e7;
+  --color-primary: #2491aa;
+  --color-primary-deep: #1a7488;
+  --color-primary-soft: #eaf4f6;
+  --color-danger: #ef4444;
+  --color-danger-deep: #9a0606;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-banner: Geist, Inter, system-ui, sans-serif;
+  --breakpoint-desktop: 1296px;
+  --shadow-stepper: 0 2px 8px rgb(26 35 50 / 6.27%);
+  --shadow-checklist: 0 4px 16px rgb(26 35 50 / 3.14%);
+  --shadow-chat: 0 0 14.2222px 3.55556px rgb(36 145 170 / 70%);
+  --width-page: 1296px;
+  --min-width-page: 1296px;
+  --max-width-page: 1296px;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-canvas text-ink max-desktop:overflow-x-hidden desktop:min-w-page m-0 w-full min-w-0 font-sans antialiased;
+  }
+
+  button {
+    @apply cursor-pointer appearance-none border-0 bg-transparent p-0 font-[inherit] text-inherit;
+  }
+
+  button:disabled {
+    @apply cursor-default;
+  }
+
+  #app {
+    @apply bg-canvas min-h-svh;
+  }
+}
